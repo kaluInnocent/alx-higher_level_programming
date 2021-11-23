@@ -44,5 +44,8 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *node = *head;
 
+	if (*head == NULL)
+		return (1);
+
 	return (check_palindrome(&node, node));
 }
