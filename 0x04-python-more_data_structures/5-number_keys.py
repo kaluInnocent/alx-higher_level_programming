@@ -2,10 +2,3 @@
 def number_keys(a_dictionary):
     if a_dictionary:
         return len(a_dictionary)
-    
-    # count = 0
-    # for k in a_dictionary:
-       # count += 1
-    # return count
-
-    # return len(a_dictionary)
