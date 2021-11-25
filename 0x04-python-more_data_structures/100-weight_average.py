@@ -1,8 +1,11 @@
 #!/usr/bin/python3
 def weight_average(my_list=[]):
-    add = 0
-    div = 0
-    for element in my_list:
-        add += (element[0] * element[1])
-        div += element[-1]
-    return add/div
+    if my_list:
+        weight = 0
+        occur = 0
+        for element in my_list:
+            (x, y) = element
+            weight += (x * y)
+            occur += y
+        return weight/occur if occur > 0 else 0
+    return 0
