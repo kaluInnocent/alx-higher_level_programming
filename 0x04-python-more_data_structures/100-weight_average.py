@@ -4,6 +4,5 @@ def weight_average(my_list=[]):
     div = 0
     for element in my_list:
         add += (element[0] * element[1])
-        div += element[1]
-    avg = add / div
-    return avg
+        div += element[-1]
+    return add/div
