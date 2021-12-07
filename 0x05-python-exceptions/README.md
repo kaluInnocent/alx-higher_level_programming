@@ -3,7 +3,7 @@
 **Read or watch**:
 
 - [Errors and Exceptions](https://alx-intranet.hbtn.io/rltoken/Yj7sDOzmKwICSHr7WEAW3A)
-- [Learn to Program 11 Static & Exception Handling[(https://alx-intranet.hbtn.io/rltoken/xASzXarhF1sBhzYkJ14LvQ) (starting at minute 7)
+- [Learn to Program 11 Static & Exception Handling](https://alx-intranet.hbtn.io/rltoken/xASzXarhF1sBhzYkJ14LvQ) (starting at minute 7)
 
 ## Learning Objectives
 At the end of this project, you are expected to be able to explain to anyone, without the help of Google:
