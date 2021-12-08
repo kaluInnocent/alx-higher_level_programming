@@ -29,8 +29,7 @@ class Square:
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
-        else:
-            self.__size = value
+        self.__size = value
 
     @property
     def position(self):
@@ -43,14 +42,12 @@ class Square:
         Args:
             value (tuple): A tuple object
         """
-        if not isinstance(value, tuple) or len(value) != 2:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if not isinstance(value[0], int) or not isinstance(value[1], int):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        if value[0] < 0 or value[1] < 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
+        if isinstance(value, tuple) and len(value) == 2 and \
+                all(isinstance(i, int) for i in value) \
+                and all(i >= 0 for i in value):
             self.__position = value
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def area(self):
         """computes the area of a square object"""
@@ -58,14 +55,14 @@ class Square:
 
     def my_print(self):
         """Prints according to the size of square"""
-        if self.__size > 0:
-            for i in range(self.__position[1]):
-                print()
-            for i in range(self.__size):
-                for j in range(self.__position[0]):
-                    print(" ")
-                for k in range(self.__size):
-                    print("#", end="")
-                print()
-        else:
+        if self.__size == 0:
+            print()
+            return
+        for i in range(self.__position[1]):
+            print()
+        for i in range(self.__size):
+            for j in range(self.__position[0]):
+                print(" ", end="")
+            for k in range(self.__size):
+                print("#", end="")
             print()
