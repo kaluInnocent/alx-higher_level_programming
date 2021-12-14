@@ -1,7 +1,3 @@
-#!/usr/bin/python3
-"""This function prints names"""
-
-
 def say_my_name(first_name, last_name=""):
     """Function prints First Name and Last name
     Args:
@@ -11,7 +7,10 @@ def say_my_name(first_name, last_name=""):
     """
     if isinstance(first_name, str):
         if isinstance(last_name, str):
-            print(f"My name is {first_name} {last_name}")
+            if last_name == "":
+                print(f"My name is {first_name}")
+            else:
+                print(f"My name is {first_name} {last_name}")
         else:
             raise TypeError("last_name must be a string")
     else:
