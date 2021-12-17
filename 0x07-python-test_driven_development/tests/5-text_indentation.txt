@@ -1,0 +1,53 @@
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quonam modo? Utrum igitur tibi litteram videor an totas paginas commovere?")
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+<BLANKLINE>
+Quonam modo?
+<BLANKLINE>
+Utrum igitur tibi litteram videor an totas paginas commovere?
+<BLANKLINE>
+
+>>> text_indentation("	come: where are you? Answer me now! Come on:get out")
+come:
+<BLANKLINE>
+where are you?
+<BLANKLINE>
+Answer me now! Come on:
+<BLANKLINE>
+get out
+
+>>> text_indentation("...See youn there... Today is the day?")
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+See youn there.
+<BLANKLINE>
+.
+<BLANKLINE>
+.
+<BLANKLINE>
+Today is the day?
+<BLANKLINE>
+
+>>> text_indentation("12")
+12
+
+"""ERRORS"""
+>>> text_indentation(12)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+>>> text_indentation(0.56)
+Traceback (most recent call last):
+...
+TypeError: text must be a string

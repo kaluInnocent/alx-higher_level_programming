@@ -1,51 +1,35 @@
-#include "lists.h"
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include "lists.h"
 
 /**
-* check_palindrome - function checks for a palindrome
-* @left: pointer to a pointer to the first half of the linked list
-* @right: pointer to the 2nd half of the linked list
-* Return: function returns 1 iuf palindrome, 0 otherwise
-*/
-
-int check_palindrome(listint_t **left, listint_t *right)
-{
-	int ispalindrome;
-
-	/*
-	 * if right equals NULL, end recursion
-	 */
-	if (right == NULL)
-		return (1);
-
-	/*
-	 * if half of the list is not a palindrome, then we need to check for
-	 * current left and right, return 0
-	 */
-	ispalindrome = check_palindrome(left, right->next);
-	if (ispalindrome != 1)
-		return (0);
-	/*
-	 * Check values at current left and right
-	 */
-	if (right->n == (*left)->n)
-		*left = (*left)->next;
-	return (1);
-}
-
-/**
-* is_palindrome -  function checks if a singly linked list is a palindrome
-* @head: pointer to a pointer to the head of the node
-* Return: Returns 1 if palindrome, 0 otherwise
+* is_palindrome - function checks if a singly linked list is a palindrome
+* @head: A pointer to a pointer to the start of the singly linked list
+* Return: 0 if it is not a palindrome, 1 if it is
+*
 */
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *node = *head;
+	int i, j, count = 0;
+	int arr[2000];
+	listint_t *ptr = *head;
 
-	if (*head == NULL)
+	if (!head || !(*head) || (*head)->next == NULL)
 		return (1);
 
-	return (check_palindrome(&node, node));
+	while (ptr)
+	{
+		arr[count] = ptr->n;
+		ptr = ptr->next;
+		count++;
+	}
+
+	j = count - 1;
+	for (i = 0; i < (count / 2) + 1; i++, j--)
+	{
+		if (arr[i] == arr[j])
+			return (1);
+	}
+	return (0);
 }
