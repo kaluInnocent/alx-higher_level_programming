@@ -3,10 +3,13 @@
 
 
 def read_file(filename=""):
-    """function reads a text file and prints it to stdout
-    Args:
-        filename (str): The text file to be read
-    Returns: Nothing
-    """
-    with open(filename, mode="r", encoding="utf-8") as file:
-        print(file.read())
+        """
+        function reads from a file
+        Args:
+            filename: (str) text to be read
+
+        Returns: Nothing
+
+        """
+        with open(filename, mode="r", encoding="utf-8") as file:
+            print(file.read(), end=""))
