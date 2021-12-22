@@ -12,7 +12,6 @@ def lazy_matrix_mul(m_a, m_b):
     Args:
         m_a: list of lists of integers or floats
         m_b: list of lists of integers or floats
-
     Returns: a new matrix
     """
     return numpy.matmul(m_a, m_b)
