@@ -1,0 +1,15 @@
+""" Test Cases"""
+>>> MyList = __import__('1-my_list').MyList
+>>> MyList.print_sorted([1, 23, 45, 23, 7, 8, 0])
+[0, 1, 7, 8, 23, 23, 45]
+>>> MyList.print_sorted([[1, 23, 45, 23, 7, 8, 0], [23, 15, 2, 4, 7, 9]])
+[[1, 23, 45, 23, 7, 8, 0], [23, 15, 2, 4, 7, 9]]
+>>> MyList.print_sorted([23, 15, 2, 4, 7, 9])
+[2, 4, 7, 9, 15, 23]>>> MyList.print_sorted([[]])
+[[]]
+>>> MyList.print_sorted([])
+[]
+>>> MyList.print_sorted([1, 4, 2, 3, 5])
+[1, 2, 3, 4, 5]
+>>> MyList.print_sorted([11, 13, 11, 0, 0, 15, 34, 56])
+[0, 0, 11, 11, 13, 15, 34, 56]
