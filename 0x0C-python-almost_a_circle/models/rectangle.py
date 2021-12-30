@@ -131,7 +131,7 @@ class Rectangle(Base):
                     self.__x = value
                 elif key == 4:
                     self.__y = value
-        else:
+        elif kwargs is not None and len(kwargs):
             for key, value in kwargs.items():
                 if key == "id":
                     self.id = value
