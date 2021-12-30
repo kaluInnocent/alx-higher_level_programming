@@ -113,3 +113,21 @@ class Rectangle(Base):
         return "[{}] ({}) {}/{} - {}/{}".format(
             self.__class__.__name__, self.id, self.__x, self.__y, self.__width,
             self.__height)
+
+    def update(self, *args):
+        """Method assigns an argument to eah attribute
+        Args:
+            args (list): contains list of arguments passed to the function
+        """
+        if args is not None and len(args):
+            for key, value in enumerate(args):
+                if key == 0:
+                    self.id = value
+                elif key == 1:
+                    self.__width = value
+                elif key == 2:
+                    self.__height = value
+                elif key == 3:
+                    self.__x = value
+                elif key == 4:
+                    self.__y = value
