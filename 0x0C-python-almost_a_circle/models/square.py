@@ -29,6 +29,32 @@ class Square(Rectangle):
         self.width = size
         self.height = size
 
+    def update(self, *args, **kwargs):
+        """Method updates attributes
+        Args:
+            args (tuple)
+            kwargs (dict)
+        """
+        if args is not None and len(args):
+            for count, item in enumerate(args):
+                if count == 0:
+                    self.id = item
+                elif count == 1:
+                    self.size = item
+                elif count == 2:
+                    self.x = item
+                elif count == 3:
+                    self.y = item
+        elif kwargs is not None and len(kwargs):
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
+
     def __str__(self):
         """Method prints a string representation of the Square object"""
         return "[{}] ({}) {}/{} - {}".format(
