@@ -28,21 +28,6 @@ class Rectangle(Base):
         """
         return self.__width
 
-    @property
-    def height(self):
-        """Method gets the value of height"""
-        return self.__height
-
-    @property
-    def x(self):
-        """Method gets x"""
-        return self.__x
-
-    @property
-    def y(self):
-        """Method gets y"""
-        return self.__y
-
     @width.setter
     def width(self, value):
         """Method sets the value for width
@@ -54,6 +39,11 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("width must be > 0")
         self.__width = value
+
+    @property
+    def height(self):
+        """Method gets the value of height"""
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -67,6 +57,11 @@ class Rectangle(Base):
             raise ValueError("height must be > 0")
         self.__height = value
 
+    @property
+    def x(self):
+        """Method gets x"""
+        return self.__x
+
     @x.setter
     def x(self, value):
         """Sets the value as x
@@ -78,6 +73,11 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x must be >= 0")
         self.__x = value
+
+    @property
+    def y(self):
+        """Method gets y"""
+        return self.__y
 
     @y.setter
     def y(self, value):
@@ -94,3 +94,13 @@ class Rectangle(Base):
     def area(self):
         """method returns the area of a Rectangle object"""
         return self.__width * self.__height
+
+    def display(self):
+        """Method prints in stdout the Rectangle
+         instance with the character #
+         """
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end="")
+            if i != self.__height - 1:
+                print()
