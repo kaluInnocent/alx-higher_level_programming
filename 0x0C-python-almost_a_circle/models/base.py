@@ -47,3 +47,15 @@ class Base:
                 for obj in list_objs:
                     mylist.append(cls.to_dictionary(obj))
                 jfile.write(cls.to_json_string(mylist))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Method converts a json string to python object and returns it
+        Args:
+            json_string (str)
+        Returns: A python object
+
+        """
+        if json_string is None or len(json_string) == 0:
+            return []
+        return json.loads(json_string)
