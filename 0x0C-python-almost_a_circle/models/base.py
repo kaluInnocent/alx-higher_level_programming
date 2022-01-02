@@ -86,3 +86,49 @@ class Base:
                 return my_list
         except IOError:
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """Method serializes in CSV
+        Args:
+            list_objs (list) list of arguments supplied to the function
+
+        """
+        with open(cls.__name__ + ".csv", "w", newline="") as csvfile:
+            if list_objs is None or list_objs == [] or len(list_objs) == 0:
+                csvfile.write("[]")
+            else:
+                if cls.__name__ == "Rectangle":
+                    fields = ["id", "width", "height", "x", "y"]
+                if cls.__name__ == "Square":
+                    fields = ["id", "size", "x", "y"]
+                writer = csv.DictWriter(csvfile, fieldnames=fields)
+                for obj in list_objs:
+                    writer.writerow(obj.to_dictionary())
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """Method deserializes a csv file
+        """
+        my_objs = []
+        try:
+            with open(cls.__name__ + ".csv", "r", newline="") as csvfile:
+                reader = csv.reader(csvfile)
+                for lines in reader:
+                    if cls.__name__ == "Rectangle":
+                        fields = {"id": int(lines[0]),
+                                  "width": int(lines[1]),
+                                  "height": int(lines[2]),
+                                  "x": int(lines[3]),
+                                  "y": int(lines[4])
+                                  }
+                    if cls.__name__ == "Square":
+                        fields = {"id": int(lines[0]),
+                                  "size": int(lines[1]),
+                                  "x": int(lines[2]),
+                                  "y": int(lines[3])
+                                  }
+                    my_objs.append(cls.create(**fields))
+                return my_objs
+        except IOError:
+            return []
