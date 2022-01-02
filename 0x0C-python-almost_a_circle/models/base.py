@@ -84,5 +84,5 @@ class Base:
                 for k in my_dict:
                     my_list.append(cls.create(**k))
                 return my_list
-        except FileExistsError:
+        except IOError:
             return []
