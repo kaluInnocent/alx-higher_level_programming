@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """A Base class"""
 import json
+import csv
+import turtle as t
 
 
 class Base:
@@ -132,3 +134,65 @@ class Base:
                 return my_objs
         except IOError:
             return []
+
+    @staticmethod
+    def create_rectangle(rect):
+        """Method creates a rectangle by turtle
+        Args:
+            rect (Rectangle)
+        """
+        t.pendown()
+        for counter in range(2):
+            t.forward(rect.width)
+            t.right(90)
+            t.forward(rect.height)
+            t.right(90)
+        t.penup()
+        t.hideturtle()
+
+    @staticmethod
+    def create_square(sq):
+        """Method creates a Square by turtle
+        Args:
+            sq (Square)
+        """
+        t.pendown()
+        for counter in range(2):
+            t.forward(sq.size)
+            t.right(90)
+            t.forward(sq.size)
+            t.right(90)
+        t.penup()
+        t.hideturtle()
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """Method opens a window and draws all the Rectangles and Squares
+        Args:
+            list_rectangles (list): list of Rectangle instances
+            list_squares (list): list of Square instances
+        """
+        xpos = -250
+        ypos = 50
+
+        t.bgcolor('Dodger blue')
+        t.pensize(2)
+        t.color('blue')
+        t.shape('turtle')
+        t.setheading(0)
+        t.showturtle()
+        t.penup()
+
+        for rect in list_rectangles:
+            t.goto(xpos, ypos)
+            Base.create_rectangle(rect)
+            xpos = xpos + rect.width + 10
+
+        xpos = -300
+        ypos = 250
+        for sq in list_squares:
+            t.goto(xpos, ypos)
+            Base.create_square(sq)
+            xpos = xpos + sq.size + 10
+
+        t.exitonclick()
