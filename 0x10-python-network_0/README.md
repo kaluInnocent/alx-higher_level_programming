@@ -1,47 +1,6 @@
--   [](https://alx-intranet.hbtn.io/dashboards/my_planning)
--   [](https://alx-intranet.hbtn.io/projects/current)
--   [](https://alx-intranet.hbtn.io/users/my_reports)
--   [](https://alx-intranet.hbtn.io/corrections/to_review)
--   [](https://alx-intranet.hbtn.io/dashboards/my_current_evaluation_quizzes)
-
-* * * * *
-
--   [](https://alx-intranet.hbtn.io/dashboards/my_curriculums)
--   [](https://alx-intranet.hbtn.io/concepts)
--   [](https://alx-intranet.hbtn.io/dashboards/video_rooms)
--   [](https://alx-intranet.hbtn.io/servers)
--   [](https://alx-intranet.hbtn.io/user_containers/current)
--   [](https://alx-intranet.hbtn.io/dashboards/my_tools)
-
-* * * * *
-
--   [](https://alx-intranet.hbtn.io/users/peers)
--   [](https://alx-intranet.hbtn.io/dashboards/my_captain_log)
--   [](https://alx-students.slack.com/)
-
-    [](https://alx-intranet.hbtn.io/users/my_profile)
-
-You just released the optional tasks of this project. Have fun!
 
 0x10. Python - Network #0
 =========================
-
--   By Guillaume
--   Weight: 1
--   Ongoing project - started 
-
-    Apr 28, 2022
-
-    , must end by 
-
-    Apr 29, 2022
-
-     - you're done with 0% of tasks.
--   Checker was released at 
-
-    Apr 28, 2022 11:00 AM
-
--   An auto review will be launched at the deadline
 
 Resources
 ---------
