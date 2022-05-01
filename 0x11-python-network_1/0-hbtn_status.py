@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-from urllib.request import Request, urlopen
+import urllib.request
 """A python script that fetches a url"""
 
 if __name__ == "__main__":
-    with urlopen("https://alx-intranet.hbtn.io/status") as response:
+    with urllib.request.urlopen("https://alx-intranet.hbtn.io/status") as response:
         pg = response.read()
     print("Body response:")
     print("\t- type: {}".format(type(pg)))
