@@ -9,7 +9,7 @@
 
 const args = process.argv;
 
-if (args.lenght === 2)  || (isNaN(parseInt(args[2]))) {
+if ((args.length === 2) || isNaN(parseInt(args[2]))) {
   console.log('Missing number of occurrences');
 } else {
   if (parseInt(args[2]) < 0) {
