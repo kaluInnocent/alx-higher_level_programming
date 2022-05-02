@@ -8,16 +8,15 @@
  */
 
 const args = process.argv;
+const num = parseInt(args[2]);
 
-if ((args.length === 2) || isNaN(parseInt(args[2]))) {
-  console.log('Missing number of occurrences');
+if ((args.length === 2) || isNaN(num)) {
+  console.log('Missing size');
 } else {
-  if (parseInt(args[2]) < 0) {
+  if (num < 0) {
   } else {
-    for (let i = 0; i < parseInt(args[2]); i++) {
-      for (let j = 0; j < parseInt(args[2]); j++) {
-        console.log('X');
-      }
+    for (let i = 0; i < num; i++) {
+      console.log('X'.repeat(parse(num));
     }
   }
 }
