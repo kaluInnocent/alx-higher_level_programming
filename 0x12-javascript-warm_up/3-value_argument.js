@@ -1,9 +1,18 @@
 #!/usr/bin/node
 
-const process = require('process');
-const arg = process.argv.slice(2); 
-if (arg[0] === null){
-console.log('No argument');
+/**
+ * A script that prints the first argument
+ * If no arguments are passed to are passed to tge script, print 'No argument'
+ * You must use console.log(...) to print all output
+ * You are not allowed to use var
+ * You are not allowed to use length
+*/
+
+const arg = process.argv.slice(2);
+if (arg){
+	for (args in arg){
+		console.log(args);
+	}
 } else{
-console.log(arg[0]);
+	console.log('No argument');
 }
