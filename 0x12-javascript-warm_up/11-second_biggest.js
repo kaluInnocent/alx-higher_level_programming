@@ -12,7 +12,7 @@
 const args = process.argv;
 let big = 0;
 let secondBig = 0;
-arr = [];
+const arr = [];
 
 if (args.length <= 3) {
   console.log(0);
