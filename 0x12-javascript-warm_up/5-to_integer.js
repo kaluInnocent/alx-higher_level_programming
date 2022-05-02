@@ -10,6 +10,6 @@ if (len(args) === 2) {
   if (isNaN(parseInt(args[2]))) {
   console.log('Not a number');
   } else {
-  console.log(`My number: ${parseInt(args[2]}`);
+  console.log(`My number: ${parseInt(args[2])}`);
   }
 }
