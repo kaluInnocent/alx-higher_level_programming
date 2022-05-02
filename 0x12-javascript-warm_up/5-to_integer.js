@@ -4,12 +4,12 @@
 
 const args = process.argv;
 
-if (len(args) === 2) {
+if (args.length === 2) {
   console.log('Not a number');
 } else {
-  if (isNaN(parseInt(args[2]))) {
-  console.log('Not a number');
+    if (isNaN(parseInt(args[2]))) {
+    console.log('Not a number');
   } else {
-  console.log(`My number: ${parseInt(args[2])}`);
+    console.log(`My number: ${parseInt(args[2])}`);
   }
 }
