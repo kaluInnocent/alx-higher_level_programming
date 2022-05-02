@@ -13,8 +13,10 @@ if ((args.length === 2) || isNaN(parseInt(args[2]))) {
   console.log('Missing number of occurrences');
 } else {
   if (parseInt(args[2]) < 0) {
-    ;
+    return;
   } else {
     for (const num = 0; num < parseInt(args[2]); num++) {
       console.log('C is fun');
     }
+  }
+}
