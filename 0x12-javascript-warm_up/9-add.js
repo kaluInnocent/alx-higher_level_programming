@@ -10,7 +10,7 @@ function add (a, b) {
   return (a + b);
 }
 
- const args = process.argv;
+const args = process.argv;
 
 if ((args.length <= 3) || isNaN(parseInt(args[2])) || isNaN(parseInt(args[3]))) {
   console.log('NaN');
