@@ -2,10 +2,10 @@
 
 // A script that prints argument passed to it
 
-const myarg = process.argv.slice(2);
+const myarg = process.argv;
 
-if (myarg) {
-console.log(myarg[0]);
+if (myarg[2]) {
+  console.log(myarg[2]);
 } else {
-console.log('No argument');
+  console.log('No argument');
 }
