@@ -5,11 +5,11 @@
  */
 
 const text = [
-'C is fun', 
-'Python is cool', 
-'JavaScript is amazing'
+  'C is fun',
+  'Python is cool',
+  'JavaScript is amazing'
 ];
 
-for (let txt in text) {
+for (const txt in text) {
   console.log(text[txt]);
 }
