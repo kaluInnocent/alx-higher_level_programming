@@ -4,8 +4,12 @@
  * Script prints 3 lines
  */
 
-const text = ['C is fun', 'Python is cool','JavaScript is amazing']
+const text = [
+'C is fun', 
+'Python is cool', 
+'JavaScript is amazing'
+];
 
 for (let txt in text) {
-  console.log(txt);
+  console.log(text[txt]);
 }
