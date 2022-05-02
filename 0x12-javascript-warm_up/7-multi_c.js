@@ -15,7 +15,7 @@ if ((args.length === 2) || isNaN(parseInt(args[2]))) {
   if (parseInt(args[2]) < 0) {
     return;
   } else {
-    for (const num = 0; num < parseInt(args[2]); num++) {
+    for (let num = 0; num < parseInt(args[2]); num++) {
       console.log('C is fun');
     }
   }
