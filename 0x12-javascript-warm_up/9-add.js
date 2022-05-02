@@ -10,12 +10,12 @@ function add (a, b) {
   return (a + b);
 }
 
-args = process.argv;
+ const args = process.argv;
 
 if ((args.length <= 3) || isNaN(parseInt(args[2])) || isNaN(parseInt(args[3]))) {
   console.log('NaN');
 } else {
-  a = parseInt(args[2]);
-  b = parseInt(args[3]);
+  const a = parseInt(args[2]);
+  const b = parseInt(args[3]);
   console.log(add(a, b));
 }
