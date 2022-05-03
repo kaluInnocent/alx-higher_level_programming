@@ -9,7 +9,7 @@ module.exports = class Rectangle {
   }
   print () {
     console.log(
-      ('X'.repeat(th-is.width + '\n')
+      ('X'.repeat(this.width) + '\n')
       .repeat(this.height))
       .split('').slice(0, -1)
       .join('')
