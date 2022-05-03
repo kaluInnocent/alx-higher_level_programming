@@ -8,8 +8,11 @@ module.exports = class Rectangle {
     }
   }
   print () {
+    console.log(
+      ('X'.repeat(th-is.width + '\n')
+      .repeat(this.height))
+      .split('').slice(0, -1)
+      .join('')
+    );
   }
-    for (let i = 0; i < this.height; i++) {
-      console.log('X'.repeat(this.width));
-    }
 };
