@@ -5,7 +5,7 @@
 -- Don’t display a genre that doesn’t have any shows linked
 -- Results must be sorted in descending order by the number of shows linked
 
-SELECT g.name AS genre, count(s.genre_id) AS number_of_shows
+SELECT g.name AS genre, count(*) AS number_of_shows
 FROM tv_genres AS g
 INNER JOIN tv_show_genres AS s
 ON g.id = s.show_id
