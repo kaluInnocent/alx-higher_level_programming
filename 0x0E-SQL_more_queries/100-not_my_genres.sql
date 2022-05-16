@@ -3,7 +3,7 @@
 -- Each record should display: tv_genres.name
 -- Results must be sorted in ascending order by the genre name
 
-SELECT  tg.name AS name
+SELECT  DISTINCT tg.name AS name
 FROM tv_genres AS tg
 INNER JOIN tv_show_genres AS ts
 ON tg.id = ts.genre_id
