@@ -9,5 +9,5 @@ INNER JOIN tv_show_genres AS ts
 ON tg.id = ts.genre_id
 INNER JOIN tv_shows AS t
 ON t.id = ts.show_id
-WHERE t.title IS NOT "Dexter"
+WHERE t.title != "Dexter"
 ORDER BY name ASC;
