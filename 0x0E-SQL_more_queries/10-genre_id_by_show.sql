@@ -5,4 +5,4 @@
 SELECT tsh.title, tshg.id
 FROM tv_shows AS tsh INNER JOIN tv_show_genres AS tshg
 ON tsh.id = tshg.genre_id
-ORDER BY tsh.title, tshg.id ASC;
+ORDER BY tsh.title, tshg.genre_id ASC;
