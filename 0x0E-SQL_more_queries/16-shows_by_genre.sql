@@ -7,6 +7,6 @@ SELECT t.title AS title, tg.name AS name
 FROM tv_shows AS t
 LEFT JOIN tv_show_genres AS ts
 ON t.id = ts.show_id
-INNER JOIN tv_genres AS tg
+LEFT JOIN tv_genres AS tg
 ON tg.id = ts.genre_id
 ORDER BY title, name ASC;
