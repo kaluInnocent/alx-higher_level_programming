@@ -6,9 +6,5 @@ SELECT t.title AS title, SUM(rate) AS rating
 FROM tv_shows AS t
 INNER JOIN tv_show_ratings AS tr
 ON t.id = tr.show_id
-INNER JOIN tv_show_genres AS ts
-ON ts.show_id = tr.show_id
-INNER JOIN tv_genres AS tg
-ON tg.id = ts.genre_id
 GROUP BY title
 ORDER BY rating DESC;
