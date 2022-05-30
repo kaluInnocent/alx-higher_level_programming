@@ -5,5 +5,9 @@ exports.nbOccurences = function (list, searchElement) {
   for (let idx = 0; idx < list.length; idx++) {
     eleCount[list[idx]] = 1 + (eleCount[list[idx]] || 0);
   }
-  return eleCount[searchElement];
+  if (list.includes(searchElement) && list.some(() => list[list.indexOf(searchElement)] ===
+ searchElement)) {
+    return eleCount[searchElement];
+  }
+  return 0;
 };
