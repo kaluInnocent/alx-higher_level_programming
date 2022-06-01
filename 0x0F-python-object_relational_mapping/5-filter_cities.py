@@ -17,7 +17,7 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute(
             """
-            SELECT cities.name,
+            SELECT *
             FROM cities
             INNER JOIN states
             ON cities.state_id = states.id
