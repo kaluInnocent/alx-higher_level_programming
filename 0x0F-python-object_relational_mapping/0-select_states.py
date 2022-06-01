@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-
-#Script lists all states in a database
-#Usage: ./0-select_states.py username password database-name
+"""Script lists all states in a database
+Usage: ./0-select_states.py username password database-name"""
 
 import sys
 import MySQLdb
