@@ -18,7 +18,7 @@ if __name__ == "__main__":
     cur.execute(
             """
             SELECT cities.id,
-            cities.name, 
+            cities.name,
             states.name
             FROM cities
             INNER JOIN states
