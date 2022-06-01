@@ -18,6 +18,7 @@ if __name__ == "__main__":
     cur.execute(
             """SELECT *
             FROM cities
+            GROUP BY state_id
             ORDER BY id ASC
             """
             )
