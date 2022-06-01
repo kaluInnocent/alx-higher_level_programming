@@ -21,7 +21,7 @@ if __name__ == "__main__":
             WHERE name = %s
             ORDER BY id ASC
             """,
-           ( sys.argv[4],)
+            (sys.argv[4],)
             )
     rows = cur.fetchall()
     for row in rows:
