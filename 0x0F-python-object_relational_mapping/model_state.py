@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""python file that contains the class definition of a State and an instance Base = declarative_base()"""
+#defines a state model
+#inherits from SQLAlchemy Base
+#links to MYSQLtable: states
 
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -11,10 +13,10 @@ Base = declarative_base()
 class State(Base):
     """A class states that inherits from sqlalchemy declarative_base()
 
-    Attributes
-    -----------
-    id: state id (int)
-    name: state name (str)
+    Attributes:
+        __table__ (str): name of SQL table
+        id (sqlalchemy.Interger): state id 
+        name (sqlalchemy.String): state name (str)
     """
 
     __tablename__ = 'states'
