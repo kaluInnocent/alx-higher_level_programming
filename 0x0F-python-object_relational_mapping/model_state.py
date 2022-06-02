@@ -9,6 +9,7 @@ State class:
 You must use the module SQLAlchemy
 Your script should connect to a MySQL server running on localhost at port 3306
 """
+
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer
 
@@ -18,7 +19,8 @@ Base = declarative_base()
 class State(Base):
     """A class states that inherits from sqlalchemy declarative_base()
     """
-    __tablename__: =  'states'
+
+    __tablename__ = 'states'
     id = Column(
             Interger,
             primary_key=True,
