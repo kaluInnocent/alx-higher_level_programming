@@ -1,7 +1,8 @@
 #!/usr/bin/python3
-"""Write a script that prints the State object
+"""A script that prints the State object
 with the name passed as argument from the database hbtn_0e_6_usa
 """
+
 import sys
 from model_state import Base, State
 from sqlalchemy.orm import sessionmaker
@@ -18,7 +19,12 @@ if __name__ == "__main__":
     Session = Sessionmaker(bind=engine)
     session = Session()
     states = session.query(State).order_by(State.id).all()
+    alert = 0
     for state in states:
         if state.name == sys.argv[4]:
-            print("{}: {}".format(state.id, state.name))
+            print("{}".format(state.id))
+            alert = 1
+            break
+        if alert == 0:
+            print("Not found")
     session.close()
