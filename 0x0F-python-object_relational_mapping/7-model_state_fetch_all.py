@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""List State in database
-"""
-
+"""Module for Base, State, and SQLALCHEMY"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
