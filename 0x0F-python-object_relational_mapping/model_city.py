@@ -7,7 +7,7 @@ from sqlalchemy import Column, String, Integer
 from model_state import Base
 
 
-class State(Base):
+class City(Base):
     """A class states that inherits from sqlalchemy declarative_base()
 
     Attributes
@@ -32,5 +32,4 @@ class State(Base):
     state_id = Column(
             Interger,
             nullable=False,
-            ForeignKey('states.id')
-            )
+            ForeignKey('states.id'))
