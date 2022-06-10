@@ -3,13 +3,12 @@
 with the name passed as argument from the database hbtn_0e_6_usa
 """
 
-import sys
-from model_state import Base, State
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy import create_engine
-
-
 if __name__ == "__main__":
+    import sys
+    from mode_state import Base, State
+    from sqlalchemy.orm import sessionmaker
+    from sqlalchemy import (create_engine)
+
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         sys.argv[1],
         sys.argv[2],
@@ -27,4 +26,3 @@ if __name__ == "__main__":
             break
         if alert == 0:
             print("Not found")
-    session.close()
