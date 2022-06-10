@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-""" Python file similar to model_state.py named model_city.py that contains the class definition of a City.
+""" Python file similar to model_state.py named model_city.py
+that contains the class definition of a City.
 """
 
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer
-from model_state import Base, State
+from model_state import State
+
+Base = declarative_base()
 
 
 class City(Base):
@@ -32,4 +35,5 @@ class City(Base):
     state_id = Column(
             Interger,
             nullable=False,
-            ForeignKey('states.id'))
+            ForeignKey('states.id')
+            )
