@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ Python file similar to model_state.py named model_city.py that contains the class definition of a City.
 """
-
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer
 from model_state import Base, State
 
+Base = declarative_base()
 
 class City(Base):
     """A class states that inherits from sqlalchemy declarative_base()
