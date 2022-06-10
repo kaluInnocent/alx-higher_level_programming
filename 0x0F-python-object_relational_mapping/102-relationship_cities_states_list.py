@@ -1,7 +1,4 @@
 #!/usr/bin/python3
-#Write a script that lists all City objects
-#from the database hbtn_0e_101_usa
-
 import sys
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
